@@ -85,12 +85,29 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             self.nameLabel.text = result?.name.uppercased()
         }.store(in: &cancellables)
+        
+        viewModel.$errorMessage.sink { [weak self] (error) in
+            guard let self = self else { return }
+            if error != "" {
+                self.showAlert(with: error?.description ?? Strings.alertMessage)
+            }
+        }.store(in: &cancellables)
     }
     
     // MARK: > Actions
     
     @objc private func showDetails() {
         print(">>> Show Pokemon Details")
+    }
+}
+
+// MARK: > Alerts
+
+extension ViewController {
+    private func showAlert(with message: String = "") {
+        let alert = UIAlertController(title: Strings.alertTitle, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Strings.alertConfirmation, style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
