@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Pokemon
 //
 //  Created by Jeronimo, Vania Aguiar on 09/08/2022.
@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import SnapKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     // MARK: > Properties
     
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
 
 // MARK: > Alerts
 
-extension ViewController {
+extension MainViewController {
     private func showAlert(with message: String = "") {
         let alert = UIAlertController(title: Strings.alertTitle, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: Strings.alertConfirmation, style: UIAlertAction.Style.default, handler: nil))
