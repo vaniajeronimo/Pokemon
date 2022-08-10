@@ -7,6 +7,4 @@
 
 import Foundation
 
-class DetailsViewModel: ObservableObject {
-    
-}
+class DetailsViewModel: ObservableObject { }

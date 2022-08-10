@@ -13,7 +13,7 @@ extension DetailsViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "Name: \(result?.name.uppercased() ?? "")"
+            cell.textLabel?.text = "\(result?.name.uppercased() ?? "")"
         case 1:
             cell.textLabel?.text = "ID: \(result?.id ?? 0)"
         case 2:
@@ -21,9 +21,9 @@ extension DetailsViewController: UITableViewDataSource {
         case 3:
             cell.textLabel?.text = "Weight: \(result?.weight ?? 0)"
         case 4:
-            break
+            cell.textLabel?.text = "Type: \(result?.types[safe: 0]?.type.name.capitalized ?? "")"
         case 5:
-            break
+            cell.textLabel?.text = "Ability: \(result?.abilities[safe: 0]?.ability.name.capitalized ?? "")"
         default:
             break
         }

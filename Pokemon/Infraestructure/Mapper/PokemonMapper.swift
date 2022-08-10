@@ -9,10 +9,12 @@ import Foundation
 
 internal extension PokemonResponse {
     func mapToPokemon() -> Pokemon? {
-       return Pokemon(height: height,
-                      id: id,
-                      name: name,
-                      sprites: sprites,
-                      weight: weight)
+        return Pokemon(abilities: abilities,
+                       height: height,
+                       id: id,
+                       name: name,
+                       sprites: sprites,
+                       weight: weight,
+                       types: types)
     }
 }

@@ -43,6 +43,8 @@ class DetailsViewController: UIViewController {
     
     private func setupTableView() { }
     
+    // MARK: > FetchData Methods
+    
     private func fetchImage(with url: String = "") {
         ImageManager.shared.fetchImage(with: url, and: self.imageView)
     }

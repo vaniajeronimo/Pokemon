@@ -8,9 +8,11 @@
 import Foundation
 
 struct PokemonResponse: Codable {
+    var abilities: [Abilities]
     var height: Int
     var id: Int
     var name: String
     var sprites: SpritesDictionaryStruct
     var weight: Int
+    var types: [Types]
 }
