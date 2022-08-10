@@ -11,6 +11,6 @@ struct PokemonResponse: Codable {
     var height: Int
     var id: Int
     var name: String
-    var sprites: Sprites
+    var sprites: SpritesDictionaryStruct
     var weight: Int
 }

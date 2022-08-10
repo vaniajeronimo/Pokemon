@@ -29,10 +29,6 @@
 		3A40F25028A321D800872C55 /* PokemonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F24F28A321D800872C55 /* PokemonMapper.swift */; };
 		3A9505B728A3AC10002240D5 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B628A3AC10002240D5 /* Sprites.swift */; };
 		3A9505B928A3ACC7002240D5 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B828A3ACC7002240D5 /* Other.swift */; };
-		3A9505BB28A3ACDD002240D5 /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505BA28A3ACDD002240D5 /* Versions.swift */; };
-		3A9505BD28A3AE49002240D5 /* DreamWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505BC28A3AE49002240D5 /* DreamWorld.swift */; };
-		3A9505BF28A3AE56002240D5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505BE28A3AE56002240D5 /* Home.swift */; };
-		3A9505C128A3AE62002240D5 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505C028A3AE62002240D5 /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,10 +55,6 @@
 		3A40F24F28A321D800872C55 /* PokemonMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapper.swift; sourceTree = "<group>"; };
 		3A9505B628A3AC10002240D5 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
 		3A9505B828A3ACC7002240D5 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
-		3A9505BA28A3ACDD002240D5 /* Versions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versions.swift; sourceTree = "<group>"; };
-		3A9505BC28A3AE49002240D5 /* DreamWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamWorld.swift; sourceTree = "<group>"; };
-		3A9505BE28A3AE56002240D5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		3A9505C028A3AE62002240D5 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		5DF8BC5B3FF04463AABD22F2 /* Pods-Pokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.debug.xcconfig"; sourceTree = "<group>"; };
 		E6C7577CEE7159E98E7846CD /* Pods-Pokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.release.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.release.xcconfig"; sourceTree = "<group>"; };
 		EDABC0B8AD52007FBB92FE54 /* Pods_Pokemon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokemon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,10 +175,6 @@
 				3A40F23F28A3187900872C55 /* Pokemon.swift */,
 				3A9505B628A3AC10002240D5 /* Sprites.swift */,
 				3A9505B828A3ACC7002240D5 /* Other.swift */,
-				3A9505BA28A3ACDD002240D5 /* Versions.swift */,
-				3A9505BC28A3AE49002240D5 /* DreamWorld.swift */,
-				3A9505BE28A3AE56002240D5 /* Home.swift */,
-				3A9505C028A3AE62002240D5 /* Artwork.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,14 +366,10 @@
 				3A40F22D28A30E3B00872C55 /* Strings.swift in Sources */,
 				3A9505B728A3AC10002240D5 /* Sprites.swift in Sources */,
 				3A40F22A28A2DF7C00872C55 /* MainViewModel.swift in Sources */,
-				3A9505BB28A3ACDD002240D5 /* Versions.swift in Sources */,
-				3A9505C128A3AE62002240D5 /* Artwork.swift in Sources */,
 				3A40F24828A31BFE00872C55 /* DomainDependenciesInjector.swift in Sources */,
-				3A9505BF28A3AE56002240D5 /* Home.swift in Sources */,
 				3A40F24428A31A5400872C55 /* GetPokemonUseCase.swift in Sources */,
 				3A40F24E28A31FE500872C55 /* InfraestructurePokemonRepository.swift in Sources */,
 				3A40F24A28A31C6C00872C55 /* InfrastructureDependenciesInjector.swift in Sources */,
-				3A9505BD28A3AE49002240D5 /* DreamWorld.swift in Sources */,
 				3A40F21528A2DAE800872C55 /* SceneDelegate.swift in Sources */,
 				3A40F25028A321D800872C55 /* PokemonMapper.swift in Sources */,
 				3A40F24228A319E400872C55 /* DomainPokemonRepository.swift in Sources */,

@@ -11,10 +11,10 @@ public struct Pokemon: Codable {
     public var height: Int
     public var id: Int
     public var name: String
-    public var sprites: Sprites
+    public var sprites: SpritesDictionaryStruct
     public var weight: Int
     
-    public init(height: Int, id: Int, name: String, sprites: Sprites, weight: Int) {
+    public init(height: Int, id: Int, name: String, sprites: SpritesDictionaryStruct, weight: Int) {
         self.height = height
         self.id = id
         self.name = name

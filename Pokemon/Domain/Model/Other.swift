@@ -7,14 +7,15 @@
 
 import Foundation
 
-public struct Other: Codable {
-    public var dream_world: [DreamWorld]
-    public var home: [Home]
-    public var official_artwork: [Artwork]
+public struct OtherDictionaryStruct: Codable {
+    public var officialArtwork: [String: String]
     
-    public init(dream_world: [DreamWorld], home: [Home], official_artwork: [Artwork]) {
-        self.dream_world = dream_world
-        self.home = home
-        self.official_artwork = official_artwork
+    enum ArtworkCodingKey: String, CodingKey {
+        case officialArtwork = "official-artwork"
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: ArtworkCodingKey.self)
+        self.officialArtwork = try container.decode([String: String].self, forKey: .officialArtwork)
     }
 }
