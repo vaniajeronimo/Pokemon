@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum URL {
+enum EndPoints {
     case pikachu
     
     var description: String {
@@ -24,7 +24,7 @@ class PokemonDataProvider {
     static let shared = PokemonDataProvider()
     
     func getPokemon(completion: ((Pokemon?, AFError?) -> ())?) {
-        let url: String = URL.pikachu.description
+        let url: String = EndPoints.pikachu.description
         
         AF.request(url).validate().responseDecodable(of: PokemonResponse.self) { (response) in
             switch response.result {

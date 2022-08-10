@@ -38,6 +38,8 @@ class MainViewController: UIViewController {
         return detailsBtn
     }()
     
+    // MARK: > Cancellables
+    
     private var cancellables: Set<AnyCancellable> = []
 
     // MARK: > LifeCycle
@@ -71,8 +73,24 @@ class MainViewController: UIViewController {
         }
     }
     
+    // MARK: > FetchData Methods
+    
     private func fetchData() {
         viewModel.fetchPokemon()
+    }
+    
+    private func fetchImage(with url: String = "") {
+        guard let url = URL(string: url) else { return }
+        
+        let getDataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data, error == nil else { return }
+            
+            executeInMainThread {
+                let image = UIImage(data: data)
+                self.imageView.image = image
+            }
+        }
+        getDataTask.resume()
     }
     
     // MARK: > BindViewModel
@@ -82,8 +100,11 @@ class MainViewController: UIViewController {
         cancellables.removeAll()
         
         viewModel.$pokemon.sink { [weak self] (result) in
-            guard let self = self else { return }
+            guard let self = self,
+                  let imageUrl = result?.sprites.other.officialArtwork.first?.value
+            else { return }
             self.nameLabel.text = result?.name.uppercased()
+            self.fetchImage(with: imageUrl)
         }.store(in: &cancellables)
         
         viewModel.$errorMessage.sink { [weak self] (error) in
