@@ -10,11 +10,23 @@ import Alamofire
 
 enum EndPoints {
     case pikachu
+    case charmander
+    case bulbasaur
+    case squirtle
+    case pidgeot
     
     var description: String {
         switch self {
         case .pikachu:
             return "https://pokeapi.co/api/v2/pokemon/pikachu"
+        case .charmander:
+            return "https://pokeapi.co/api/v2/pokemon/charmander"
+        case .bulbasaur:
+            return "https://pokeapi.co/api/v2/pokemon/bulbasaur"
+        case .squirtle:
+            return "https://pokeapi.co/api/v2/pokemon/squirtle"
+        case .pidgeot:
+            return "https://pokeapi.co/api/v2/pokemon/pidgeot"
         }
     }
 }
@@ -24,7 +36,12 @@ class PokemonDataProvider {
     static let shared = PokemonDataProvider()
     
     func getPokemon(completion: ((Pokemon?, AFError?) -> ())?) {
-        let url: String = EndPoints.pikachu.description
+        let urls: [String] = [EndPoints.pikachu.description,
+                              EndPoints.charmander.description,
+                              EndPoints.bulbasaur.description,
+                              EndPoints.squirtle.description]
+        
+        guard let url = urls.randomElement()?.description else { return }
         
         AF.request(url).validate().responseDecodable(of: PokemonResponse.self) { (response) in
             switch response.result {

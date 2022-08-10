@@ -22,18 +22,27 @@ class MainViewController: UIViewController {
     }()
     
     lazy var nameLabel: UILabel = {
-        let name = UILabel()
-        name.text = Strings.pokemonNameLabel
-        name.textAlignment = .center
-        return name
+        let label = UILabel()
+        label.text = Strings.pokemonNameLabel
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 20.0)
+        return label
+    }()
+    
+    lazy var underlineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBlue
+        return view
     }()
     
     lazy var detailsButton: UIButton = {
         let detailsBtn = UIButton()
         detailsBtn.setTitle(Strings.buttonTitle, for: .normal)
-        detailsBtn.setTitleColor(UIColor.white, for: .normal)
+        detailsBtn.setTitleColor(.white, for: .normal)
+        detailsBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .regular)
         detailsBtn.backgroundColor = UIColor.tintColor
-        detailsBtn.layer.cornerRadius = 6.0
+        detailsBtn.layer.cornerRadius = 12.0
         detailsBtn.addTarget(self, action: #selector(showDetails), for: .touchUpInside)
         return detailsBtn
     }()
@@ -41,6 +50,8 @@ class MainViewController: UIViewController {
     // MARK: > Cancellables
     
     private var cancellables: Set<AnyCancellable> = []
+    
+    var result: Pokemon?
 
     // MARK: > LifeCycle
     
@@ -55,15 +66,21 @@ class MainViewController: UIViewController {
     
     private func setupUI() {
         view.addSubview(nameLabel)
+        view.addSubview(underlineView)
         view.addSubview(detailsButton)
         setupConstraints()
     }
     
     private func setupConstraints() {
         nameLabel.snp.makeConstraints { make in
-            make.height.equalTo(30.0)
             make.leading.trailing.equalTo(imageView)
             make.top.equalTo(imageView.snp.bottom).offset(50.0)
+        }
+        
+        underlineView.snp.makeConstraints { make in
+            make.height.equalTo(2.0)
+            make.leading.trailing.equalTo(nameLabel)
+            make.top.equalTo(nameLabel.snp.bottom).offset(10.0)
         }
         
         detailsButton.snp.makeConstraints { make in
@@ -80,17 +97,7 @@ class MainViewController: UIViewController {
     }
     
     private func fetchImage(with url: String = "") {
-        guard let url = URL(string: url) else { return }
-        
-        let getDataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
-            guard let data = data, error == nil else { return }
-            
-            executeInMainThread {
-                let image = UIImage(data: data)
-                self.imageView.image = image
-            }
-        }
-        getDataTask.resume()
+        ImageManager.shared.fetchImage(with: url, and: self.imageView)
     }
     
     // MARK: > BindViewModel
@@ -103,6 +110,7 @@ class MainViewController: UIViewController {
             guard let self = self,
                   let imageUrl = result?.sprites.other.officialArtwork.first?.value
             else { return }
+            self.result = result
             self.nameLabel.text = result?.name.uppercased()
             self.fetchImage(with: imageUrl)
         }.store(in: &cancellables)
@@ -118,7 +126,11 @@ class MainViewController: UIViewController {
     // MARK: > Actions
     
     @objc private func showDetails() {
-        print(">>> Show Pokemon Details")
+        let storyboard: UIStoryboard = UIStoryboard(name: Strings.storyboardName, bundle: nil)
+        if let detailsVC = storyboard.instantiateViewController(withIdentifier: Strings.storyboardIdentifier) as? DetailsViewController {
+            detailsVC.result = result
+            self.navigationController?.pushViewController(detailsVC, animated: true)
+        }
     }
 }
 

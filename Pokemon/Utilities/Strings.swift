@@ -13,4 +13,6 @@ struct Strings {
     static let alertConfirmation: String = "OK"
     static let alertTitle: String = "Failed to fetch data"
     static let alertMessage: String = "Unknown error occurred"
+    static let storyboardIdentifier: String = "detailsVC"
+    static let storyboardName: String = "Main"
 }
