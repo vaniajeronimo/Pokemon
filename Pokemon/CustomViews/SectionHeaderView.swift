@@ -13,7 +13,7 @@ class SectionHeaderView: UITableViewHeaderFooterView {
     
     lazy var titleLabel: UILabel = {
         let title = UILabel()
-        title.textColor = .black
+        title.textColor = .label
         title.numberOfLines = 0
         title.textAlignment = .center
         title.font = .systemFont(ofSize: 17.0, weight: .bold)

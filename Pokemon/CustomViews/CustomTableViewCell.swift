@@ -35,7 +35,7 @@ class CustomTableViewCell: UITableViewCell {
     var valueLabel: UILabel = {
         let value = UILabel()
         value.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
-        value.textColor = .black
+        value.textColor = .label
         value.numberOfLines = 1
         value.translatesAutoresizingMaskIntoConstraints = false
         return value
