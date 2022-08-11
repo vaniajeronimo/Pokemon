@@ -16,6 +16,6 @@ public struct OtherDictionaryStruct: Codable {
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ArtworkCodingKey.self)
-        self.officialArtwork = try container.decode([String: String].self, forKey: .officialArtwork)
+        self.officialArtwork = try container.decodeIfPresent([String: String].self, forKey: .officialArtwork) ?? [:]
     }
 }
