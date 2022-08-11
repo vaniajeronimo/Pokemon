@@ -15,4 +15,5 @@ struct Strings {
     static let alertMessage: String = "Unknown error occurred"
     static let storyboardIdentifier: String = "detailsVC"
     static let storyboardName: String = "Main"
+    static let reuseIdentifier: String = "SectionHeaderView"
 }

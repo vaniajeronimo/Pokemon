@@ -33,15 +33,26 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
+        registerCells()
     }
     
     // MARK: > Setup Methods
     
     private func setupUI() {
         fetchImage(with: result?.sprites.other.officialArtwork.first?.value ?? "")
+        setupTableView()
     }
     
-    private func setupTableView() { }
+    private func setupTableView() {
+        registerCells()
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+
+    private func registerCells() {
+        tableView.register(UINib(nibName: Strings.reuseIdentifier, bundle: nil),
+                           forHeaderFooterViewReuseIdentifier: Strings.reuseIdentifier)
+    }
     
     // MARK: > FetchData Methods
     
@@ -52,4 +63,11 @@ class DetailsViewController: UIViewController {
     // MARK: > BindViewModel
     
     private func bindViewModel() { }
+}
+
+
+extension DetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
