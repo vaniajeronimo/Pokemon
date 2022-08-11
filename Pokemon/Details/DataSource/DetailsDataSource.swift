@@ -11,7 +11,31 @@ extension DetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Strings.customCellReuseIdentifier)
                 as? CustomTableViewCell else { return UITableViewCell() }
-        
+        setupCells(with: cell, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Strings.sectionReuseIdentifier) as? SectionHeaderView else { return nil }
+        header.titleLabel.text = "\(result?.name.capitalized ?? "")"
+        return header
+    }
+
+    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
+    }
+}
+
+extension DetailsViewController {
+    private func setupCells(with cell: CustomTableViewCell, for indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
             cell.titleLabel.text = Strings.id + ":"
@@ -34,32 +58,5 @@ extension DetailsViewController: UITableViewDataSource {
         default:
             break
         }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Strings.sectionReuseIdentifier) as? SectionHeaderView else { return nil }
-        header.titleLabel.text = "\(result?.name.capitalized ?? "")"
-        return header
-    }
-
-    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40.0
-    }
-    
-    private func isLastRow(in tableView: UITableView, for indexPath: IndexPath) -> Bool {
-        let totalRows = tableView.numberOfRows(inSection: indexPath.section)
-        if indexPath.row == totalRows - 1 {
-            return true
-        }
-        return false
     }
 }
