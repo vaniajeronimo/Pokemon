@@ -9,19 +9,25 @@ import UIKit
 
 extension DetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Strings.customCellReuseIdentifier)
+                as? CustomTableViewCell else { return UITableViewCell() }
         
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "ID: \(result?.id ?? 0)"
+            cell.titleLabel.text = "ID:"
+            cell.valueLabel.text = "\(result?.id ?? 0)"
         case 1:
-            cell.textLabel?.text = "Height: \(result?.height ?? 0)"
+            cell.titleLabel.text = "Height:"
+            cell.valueLabel.text = "\(result?.height ?? 0)"
         case 2:
-            cell.textLabel?.text = "Weight: \(result?.weight ?? 0)"
+            cell.titleLabel.text = "Weight:"
+            cell.valueLabel.text = "\(result?.weight ?? 0)"
         case 3:
-            cell.textLabel?.text = "Type: \(result?.types[safe: 0]?.type.name.capitalized ?? "")"
+            cell.titleLabel.text = "Type:"
+            cell.valueLabel.text = "\(result?.types[safe: 0]?.type.name.capitalized ?? "")"
         case 4:
-            cell.textLabel?.text = "Ability: \(result?.abilities[safe: 0]?.ability.name.capitalized ?? "")"
+            cell.titleLabel.text = "Ability:"
+            cell.valueLabel.text = "\(result?.abilities[safe: 0]?.ability.name.capitalized ?? "")"
         default:
             break
         }
@@ -33,13 +39,17 @@ extension DetailsViewController: UITableViewDataSource {
         return 5
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Strings.reuseIdentifier) as? SectionHeaderView else { return nil }
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Strings.sectionReuseIdentifier) as? SectionHeaderView else { return nil }
         header.titleLabel.text = "\(result?.name.capitalized ?? "")"
         return header
     }
 
     private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
+        return 40.0
     }
 }

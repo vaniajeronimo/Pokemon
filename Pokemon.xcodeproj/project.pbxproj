@@ -35,6 +35,8 @@
 		3A40F26028A4690300872C55 /* Abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F25F28A4690300872C55 /* Abilities.swift */; };
 		3A40F26328A4FE3900872C55 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F26228A4FE3900872C55 /* SectionHeaderView.swift */; };
 		3A40F26528A4FE5500872C55 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A40F26428A4FE5500872C55 /* SectionHeaderView.xib */; };
+		3A40F26828A5212600872C55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F26628A5212600872C55 /* CustomTableViewCell.swift */; };
+		3A40F26928A5212600872C55 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A40F26728A5212600872C55 /* CustomTableViewCell.xib */; };
 		3A9505B728A3AC10002240D5 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B628A3AC10002240D5 /* Sprites.swift */; };
 		3A9505B928A3ACC7002240D5 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B828A3ACC7002240D5 /* Other.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		3A40F25F28A4690300872C55 /* Abilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abilities.swift; sourceTree = "<group>"; };
 		3A40F26228A4FE3900872C55 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		3A40F26428A4FE5500872C55 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		3A40F26628A5212600872C55 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3A40F26728A5212600872C55 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		3A9505B628A3AC10002240D5 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
 		3A9505B828A3ACC7002240D5 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		5DF8BC5B3FF04463AABD22F2 /* Pods-Pokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 			children = (
 				3A40F26228A4FE3900872C55 /* SectionHeaderView.swift */,
 				3A40F26428A4FE5500872C55 /* SectionHeaderView.xib */,
+				3A40F26628A5212600872C55 /* CustomTableViewCell.swift */,
+				3A40F26728A5212600872C55 /* CustomTableViewCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				3A40F26528A4FE5500872C55 /* SectionHeaderView.xib in Resources */,
 				3A40F21F28A2DAE900872C55 /* LaunchScreen.storyboard in Resources */,
 				3A40F21C28A2DAE900872C55 /* Assets.xcassets in Resources */,
+				3A40F26928A5212600872C55 /* CustomTableViewCell.xib in Resources */,
 				3A40F21A28A2DAE800872C55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +439,7 @@
 				3A40F25728A4148D00872C55 /* DetailsViewModel.swift in Sources */,
 				3A40F24028A3187900872C55 /* Pokemon.swift in Sources */,
 				3A40F22D28A30E3B00872C55 /* Strings.swift in Sources */,
+				3A40F26828A5212600872C55 /* CustomTableViewCell.swift in Sources */,
 				3A9505B728A3AC10002240D5 /* Sprites.swift in Sources */,
 				3A40F25E28A45D2900872C55 /* Types.swift in Sources */,
 				3A40F22A28A2DF7C00872C55 /* MainViewModel.swift in Sources */,
