@@ -34,7 +34,6 @@ extension DetailsViewController: UITableViewDataSource {
         default:
             break
         }
-        
         return cell
     }
     
@@ -54,5 +53,13 @@ extension DetailsViewController: UITableViewDataSource {
 
     private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40.0
+    }
+    
+    private func isLastRow(in tableView: UITableView, for indexPath: IndexPath) -> Bool {
+        let totalRows = tableView.numberOfRows(inSection: indexPath.section)
+        if indexPath.row == totalRows - 1 {
+            return true
+        }
+        return false
     }
 }

@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     
     // MARK: > Properties
     
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var pokemonImageView: UIImageView!
     
     lazy var viewModel: MainViewModel = {
         let viewModel = MainViewModel()
@@ -27,12 +27,14 @@ class MainViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 20.0)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var underlineView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBlue
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -44,6 +46,7 @@ class MainViewController: UIViewController {
         detailsBtn.backgroundColor = UIColor.tintColor
         detailsBtn.layer.cornerRadius = 12.0
         detailsBtn.addTarget(self, action: #selector(showDetails), for: .touchUpInside)
+        detailsBtn.translatesAutoresizingMaskIntoConstraints = false
         return detailsBtn
     }()
     
@@ -73,8 +76,8 @@ class MainViewController: UIViewController {
     
     private func setupConstraints() {
         nameLabel.snp.makeConstraints { make in
-            make.leading.trailing.equalTo(imageView)
-            make.top.equalTo(imageView.snp.bottom).offset(50.0)
+            make.leading.trailing.equalTo(pokemonImageView)
+            make.top.equalTo(pokemonImageView.snp.bottom).offset(50.0)
         }
         
         underlineView.snp.makeConstraints { make in
@@ -97,7 +100,7 @@ class MainViewController: UIViewController {
     }
     
     private func fetchImage(with url: String = "") {
-        ImageManager.shared.fetchImage(with: url, and: self.imageView)
+        ImageManager.shared.fetchImage(with: url, and: self.pokemonImageView)
     }
     
     // MARK: > BindViewModel

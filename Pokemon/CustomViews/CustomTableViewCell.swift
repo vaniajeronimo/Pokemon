@@ -18,6 +18,7 @@ class CustomTableViewCell: UITableViewCell {
         sv.distribution = .fill
         sv.alignment = .fill
         sv.spacing = 5.0
+        sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
     }()
     
@@ -27,6 +28,7 @@ class CustomTableViewCell: UITableViewCell {
         title.textColor = .systemBlue
         title.numberOfLines = 1
         title.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
@@ -35,6 +37,7 @@ class CustomTableViewCell: UITableViewCell {
         value.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
         value.textColor = .black
         value.numberOfLines = 1
+        value.translatesAutoresizingMaskIntoConstraints = false
         return value
     }()
     

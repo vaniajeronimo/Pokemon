@@ -40,8 +40,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="l7F-Xz-zSJ"/>
                     <connections>
-                        <outlet property="imageView" destination="5Lb-iu-K91" id="ysf-YC-MWa"/>
-                        <outlet property="logoImage" destination="Yhv-9i-yFy" id="pC4-Re-Pey"/>
+                        <outlet property="logoImageView" destination="Yhv-9i-yFy" id="cqG-Mg-Or5"/>
+                        <outlet property="pokemonImageView" destination="5Lb-iu-K91" id="yyC-lH-Lcl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oHi-aY-WVT">
-                                <rect key="frame" x="0.0" y="404" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="384" width="414" height="478"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="24" id="teS-CA-8Hb">
@@ -88,7 +88,7 @@
                             <constraint firstItem="Siz-sz-nhC" firstAttribute="bottom" secondItem="oHi-aY-WVT" secondAttribute="bottom" id="S4v-4K-fTa"/>
                             <constraint firstItem="Siz-sz-nhC" firstAttribute="trailing" secondItem="oHi-aY-WVT" secondAttribute="trailing" id="SfX-Va-0u9"/>
                             <constraint firstItem="wVC-gj-rME" firstAttribute="centerX" secondItem="blT-iA-0cl" secondAttribute="centerX" id="g9H-zR-9Lw"/>
-                            <constraint firstItem="oHi-aY-WVT" firstAttribute="top" secondItem="wVC-gj-rME" secondAttribute="bottom" constant="50" id="nxs-el-dNg"/>
+                            <constraint firstItem="oHi-aY-WVT" firstAttribute="top" secondItem="wVC-gj-rME" secondAttribute="bottom" constant="30" id="nxs-el-dNg"/>
                             <constraint firstItem="wVC-gj-rME" firstAttribute="top" secondItem="Siz-sz-nhC" secondAttribute="top" constant="60" id="uMn-LB-aoi"/>
                         </constraints>
                     </view>

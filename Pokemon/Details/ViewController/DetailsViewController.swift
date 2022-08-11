@@ -47,6 +47,12 @@ class DetailsViewController: UIViewController {
         registerCells()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorInset = UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
+        tableView.separatorStyle = .singleLine
+        
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0.0
+        }
     }
 
     private func registerCells() {

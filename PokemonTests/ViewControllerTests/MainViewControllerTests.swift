@@ -34,6 +34,6 @@ class MainViewControllerTests: XCTestCase {
     }
     
     func testImageView_mainView() {
-        expect(self.viewController.imageView.image).toNot(beNil())
+        expect(self.viewController.pokemonImageView.image).toNot(beNil())
     }
 }

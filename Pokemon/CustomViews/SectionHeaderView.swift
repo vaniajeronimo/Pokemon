@@ -17,6 +17,7 @@ class SectionHeaderView: UITableViewHeaderFooterView {
         title.numberOfLines = 0
         title.textAlignment = .center
         title.font = .systemFont(ofSize: 17.0, weight: .bold)
+        title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
   
