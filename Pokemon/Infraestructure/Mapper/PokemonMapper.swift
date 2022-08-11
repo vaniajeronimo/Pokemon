@@ -12,6 +12,7 @@ internal extension PokemonResponse {
         return Pokemon(abilities: abilities,
                        height: height,
                        id: id,
+                       moves: moves,
                        name: name,
                        sprites: sprites,
                        weight: weight,

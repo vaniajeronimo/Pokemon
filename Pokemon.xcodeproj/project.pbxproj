@@ -41,6 +41,8 @@
 		3A40F27F28A5491B00872C55 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F27E28A5491B00872C55 /* MainViewControllerTests.swift */; };
 		3A40F28228A5514400872C55 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F28128A5514400872C55 /* MainViewModelTests.swift */; };
 		3A40F28828A5541C00872C55 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F28728A5541B00872C55 /* ImageManagerTests.swift */; };
+		3A40F28A28A571A900872C55 /* DetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F28928A571A900872C55 /* DetailsViewControllerTests.swift */; };
+		3A40F28C28A572F200872C55 /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40F28B28A572F200872C55 /* Moves.swift */; };
 		3A9505B728A3AC10002240D5 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B628A3AC10002240D5 /* Sprites.swift */; };
 		3A9505B928A3ACC7002240D5 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9505B828A3ACC7002240D5 /* Other.swift */; };
 		5B55CD19C8A1484BE57FF55F /* Pods_PokemonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35385C42A35EBC03E5C0813 /* Pods_PokemonTests.framework */; };
@@ -94,6 +96,8 @@
 		3A40F27E28A5491B00872C55 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		3A40F28128A5514400872C55 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		3A40F28728A5541B00872C55 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		3A40F28928A571A900872C55 /* DetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		3A40F28B28A572F200872C55 /* Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
 		3A9505B628A3AC10002240D5 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
 		3A9505B828A3ACC7002240D5 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		5DF8BC5B3FF04463AABD22F2 /* Pods-Pokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				3A9505B828A3ACC7002240D5 /* Other.swift */,
 				3A40F25D28A45D2900872C55 /* Types.swift */,
 				3A40F25F28A4690300872C55 /* Abilities.swift */,
+				3A40F28B28A572F200872C55 /* Moves.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				3A40F27E28A5491B00872C55 /* MainViewControllerTests.swift */,
+				3A40F28928A571A900872C55 /* DetailsViewControllerTests.swift */,
 			);
 			path = ViewControllerTests;
 			sourceTree = "<group>";
@@ -592,6 +598,7 @@
 				3A40F24A28A31C6C00872C55 /* InfrastructureDependenciesInjector.swift in Sources */,
 				3A40F25C28A42C5200872C55 /* ImageManager.swift in Sources */,
 				3A40F21528A2DAE800872C55 /* SceneDelegate.swift in Sources */,
+				3A40F28C28A572F200872C55 /* Moves.swift in Sources */,
 				3A40F26328A4FE3900872C55 /* SectionHeaderView.swift in Sources */,
 				3A40F25028A321D800872C55 /* PokemonMapper.swift in Sources */,
 				3A40F24228A319E400872C55 /* DomainPokemonRepository.swift in Sources */,
@@ -603,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A40F28228A5514400872C55 /* MainViewModelTests.swift in Sources */,
+				3A40F28A28A571A900872C55 /* DetailsViewControllerTests.swift in Sources */,
 				3A40F27528A548BD00872C55 /* PokemonTests.swift in Sources */,
 				3A40F27F28A5491B00872C55 /* MainViewControllerTests.swift in Sources */,
 				3A40F28828A5541C00872C55 /* ImageManagerTests.swift in Sources */,

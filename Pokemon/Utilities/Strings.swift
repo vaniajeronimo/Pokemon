@@ -22,4 +22,5 @@ struct Strings {
     static let weight: String = "Weight"
     static let type: String = "Type"
     static let ability: String = "Ability"
+    static let moves: String = "Moves"
 }

@@ -28,6 +28,9 @@ extension DetailsViewController: UITableViewDataSource {
         case 4:
             cell.titleLabel.text = Strings.ability + ":"
             cell.valueLabel.text = "\(result?.abilities[safe: 0]?.ability.name.capitalized ?? "")"
+        case 5:
+            cell.titleLabel.text = Strings.moves + ":"
+            cell.valueLabel.text = "\(result?.moves[safe: 0]?.move.name.capitalized ?? "")"
         default:
             break
         }
@@ -36,7 +39,7 @@ extension DetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
