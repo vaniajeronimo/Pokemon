@@ -30,6 +30,10 @@ class MainViewControllerTests: XCTestCase {
     }
     
     func testBindViewModel() {
-        
+        expect(self.viewController.viewModel).toNot(beNil())
+    }
+    
+    func testImageView_mainView() {
+        expect(self.viewController.imageView.image).toNot(beNil())
     }
 }
