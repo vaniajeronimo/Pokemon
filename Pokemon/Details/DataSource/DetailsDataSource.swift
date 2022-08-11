@@ -14,19 +14,19 @@ extension DetailsViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            cell.titleLabel.text = "ID:"
+            cell.titleLabel.text = Strings.id + ":"
             cell.valueLabel.text = "\(result?.id ?? 0)"
         case 1:
-            cell.titleLabel.text = "Height:"
+            cell.titleLabel.text = Strings.height + ":"
             cell.valueLabel.text = "\(result?.height ?? 0)"
         case 2:
-            cell.titleLabel.text = "Weight:"
+            cell.titleLabel.text = Strings.weight + ":"
             cell.valueLabel.text = "\(result?.weight ?? 0)"
         case 3:
-            cell.titleLabel.text = "Type:"
+            cell.titleLabel.text = Strings.type + ":"
             cell.valueLabel.text = "\(result?.types[safe: 0]?.type.name.capitalized ?? "")"
         case 4:
-            cell.titleLabel.text = "Ability:"
+            cell.titleLabel.text = Strings.ability + ":"
             cell.valueLabel.text = "\(result?.abilities[safe: 0]?.ability.name.capitalized ?? "")"
         default:
             break

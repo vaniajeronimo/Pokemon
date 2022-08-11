@@ -17,4 +17,9 @@ struct Strings {
     static let storyboardName: String = "Main"
     static let sectionReuseIdentifier: String = "SectionHeaderView"
     static let customCellReuseIdentifier: String = "CustomTableViewCell"
+    static let id: String = "ID"
+    static let height: String = "Height"
+    static let weight: String = "Weight"
+    static let type: String = "Type"
+    static let ability: String = "Ability"
 }
