@@ -59,7 +59,8 @@ class DetailsViewController: UIViewController {
     private func registerCells() {
         tableView.register(UINib(nibName: Strings.sectionReuseIdentifier, bundle: nil),
                            forHeaderFooterViewReuseIdentifier: Strings.sectionReuseIdentifier)
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: Strings.customCellReuseIdentifier.self)
+        tableView.register(CustomTableViewCell.self,
+                           forCellReuseIdentifier: Strings.customCellReuseIdentifier.self)
     }
     
     // MARK: > FetchData Methods
