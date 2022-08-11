@@ -23,4 +23,5 @@ struct Strings {
     static let type: String = "Type"
     static let ability: String = "Ability"
     static let moves: String = "Moves"
+    static let stats: String = "Stats"
 }

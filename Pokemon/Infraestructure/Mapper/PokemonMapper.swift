@@ -13,6 +13,7 @@ internal extension PokemonResponse {
                        height: height,
                        id: id,
                        moves: moves,
+                       stats: stats,
                        name: name,
                        sprites: sprites,
                        weight: weight,
