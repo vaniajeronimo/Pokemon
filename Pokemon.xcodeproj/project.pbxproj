@@ -155,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				3A40F26128A4FD9A00872C55 /* CustomViews */,
-				3A40F22628A2DF5800872C55 /* Main */,
-				3A40F25128A4144E00872C55 /* Details */,
+				3A40F22628A2DF5800872C55 /* MainView */,
+				3A40F25128A4144E00872C55 /* DetailsView */,
 				3A40F22B28A30E2E00872C55 /* Utilities */,
 				3A40F23228A30EF800872C55 /* Domain */,
 				3A40F23628A30F4500872C55 /* Infraestructure */,
@@ -170,13 +170,13 @@
 			path = Pokemon;
 			sourceTree = "<group>";
 		};
-		3A40F22628A2DF5800872C55 /* Main */ = {
+		3A40F22628A2DF5800872C55 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
 				3A40F22828A2DF6B00872C55 /* MainViewModel */,
 				3A40F22728A2DF6500872C55 /* MainViewController */,
 			);
-			path = Main;
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		3A40F22728A2DF6500872C55 /* MainViewController */ = {
@@ -291,14 +291,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		3A40F25128A4144E00872C55 /* Details */ = {
+		3A40F25128A4144E00872C55 /* DetailsView */ = {
 			isa = PBXGroup;
 			children = (
 				3A40F25328A4147100872C55 /* ViewModel */,
 				3A40F25228A4146000872C55 /* ViewController */,
 				3A40F25828A4274F00872C55 /* DataSource */,
 			);
-			path = Details;
+			path = DetailsView;
 			sourceTree = "<group>";
 		};
 		3A40F25228A4146000872C55 /* ViewController */ = {

@@ -8,7 +8,7 @@
 import Foundation
 
 class DomainDependenciesInjector {
-    private init() {}
+    private init() { }
     
     static func injectGetPokemon() -> GetPokemonUseCase {
         return GetPokemonUseCase(pokemonRepository: InfrastructureDependenciesInjector.injectPokemonRepository())

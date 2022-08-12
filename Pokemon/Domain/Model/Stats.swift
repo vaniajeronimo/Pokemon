@@ -10,8 +10,8 @@ import Foundation
 public struct Stats: Codable {
     public var stat: StatsDictionaryStruct
     
-    public init(ability: StatsDictionaryStruct) {
-        self.stat = ability
+    public init(stat: StatsDictionaryStruct) {
+        self.stat = stat
     }
 }
 

@@ -10,8 +10,8 @@ import Foundation
 public struct Moves: Codable {
     public var move: MovesDictionaryStruct
     
-    public init(ability: MovesDictionaryStruct) {
-        self.move = ability
+    public init(move: MovesDictionaryStruct) {
+        self.move = move
     }
 }
 
