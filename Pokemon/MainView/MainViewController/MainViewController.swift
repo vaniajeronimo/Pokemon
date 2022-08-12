@@ -50,11 +50,11 @@ class MainViewController: UIViewController {
         return detailsBtn
     }()
     
+    private var result: Pokemon?
+    
     // MARK: > Cancellables
     
     private var cancellables: Set<AnyCancellable> = []
-    
-    var result: Pokemon?
 
     // MARK: > LifeCycle
     
